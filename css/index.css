@@ -1,0 +1,346 @@
+@charset "UTF-8";
+body, html {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited, a:hover, a:target {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+/*头部*/
+.header, .headerBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 89px;
+    width: 100%;
+    z-index: 10;
+}
+
+.header {
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.headerBg {
+    background: #000;
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+    z-index: 9;
+}
+
+.header .logo {
+    float: left;
+    position: absolute;
+    top: 19px;
+    width: 270px;
+    height: 51px;
+    z-index: 2;
+}
+
+.header .logo a {
+    font-size: 0;
+}
+
+.header .logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+.header .nav {
+    float: right;
+}
+
+
+.header .nav ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header .nav ul li {
+    float: left;
+    position: relative;
+}
+
+.header .nav ul li a {
+    padding: 0 30px;
+    height: 88px;
+    font-size: 14px;
+    line-height: 88px;
+    text-align: center;
+}
+
+.header .nav ul li em {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 0;
+    width: 0;
+    background: #000;
+    opacity: 0.1;
+
+}
+/*过度动画效果*/
+.header .nav ul li a:hover em {
+    margin-left: -50%;
+    width: 100%;
+    height: 88px;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -ms-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+}
+
+/*轮播图区域*/
+
+.slide {
+    position: relative;
+    padding-top: 89px;
+    width: 100%;
+    height: 490px;
+    background: #FD6A28;
+    overflow: hidden;
+
+}
+.slide.slideBg1{
+    background:  #FD6A28;
+    opacity: 0;
+}
+.slide.slideBg2{
+    background: #22206a;
+    opacity: 0;
+
+}
+.slide .outer-box{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -480px;
+    width: 960px;
+    height: 550px;
+    overflow: hidden;
+}
+.slide .banner-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -480px;
+    width: 2880px;
+    height: 550px;
+
+}
+.slide .banner-box div{
+    float: left;
+}
+.slide .page1 {
+    width: 960px;
+    height: 550px;
+    background: #FD6A28;
+}
+.slide img{
+    display: block;
+}
+.slide .page1 img {
+    width: 960px;
+    height: 550px;
+}
+
+.slide .page2 {
+    width: 960px;
+    height: 550px;
+    background: #22206a;
+}
+
+.slide .page2 img {
+    width: 960px;
+    height: 550px;
+}
+
+.slide .pre {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    width: 44px;
+    height: 44px;
+    background: url("../img/l-btn.png") no-repeat;
+}
+
+.slide .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    width: 44px;
+    height: 44px;
+    background: url("../img/r-btn.png") no-repeat;
+}
+
+.slide a {
+    opacity: 0.6;
+}
+
+.slide a:hover {
+    opacity: 0.9;
+}
+
+.slide .pageNum {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+}
+
+.slide .pageNum li {
+    float: left;
+    margin-left: 5px;
+    width: 24px;
+    height: 5px;
+    background: #fff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: pointer;
+}
+
+.slide .pageNum li.bg {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+/*产品优势列表*/
+.main .product-features li {
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 248px;
+}
+
+.main .product-features li img {
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 70px;
+
+}
+
+.main .product-features li h3 {
+    display: inline-block;
+    position: absolute;
+    top: 142px;
+    left: 90px;
+    font-size: 18px;
+    color: #ff6900;
+}
+
+.main .product-features li p {
+    display: inline-block;
+    position: absolute;
+    top: 173px;
+    left: 68px;
+}
+
+.main .product-features:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*新闻热点*/
+.news-list {
+    width: 100%;
+    background: #F3F5F8;
+
+    padding-top: 30px;
+}
+
+.news-list .title {
+    font-size: 18px;
+    padding-left: 21px;
+    border-left: 4px solid #ff7a0e;
+    margin-left: 51px;
+    line-height: 16px;
+    height: 18px;
+    color: #ff7a0e;
+}
+
+.news-list .title a {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+}
+
+.news-list .title a:hover {
+    color: #ff7a0e;
+}
+
+.news-list .hot-news {
+    margin-right: 47px;
+    padding: 25px 0 5px 76px;
+    width: 834px;
+    height: 84px;
+}
+
+.news-list .hot-news img {
+    float: left;
+    display: block;
+    margin-right: 50px;
+    width: 152px;
+    height: 81px;
+}
+
+.news-list .hot-news .font-box {
+    word-wrap: break-word;
+    line-height: 22px;
+}
+
+.news-list .hot-news .font-box p {
+    padding-top: 10px;
+    font-size: 12px;
+    color: #606060;
+}
+
+/*固定微信*/
+.wechat {
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    width: 82px;
+    height: 37px;
+    background: url("../img/back.png") no-repeat 0 -352px;
+    border: 1px solid #F3F5F8;
+    border-radius: 3px;
+}
+/*响应式布局*/
+@media all and (max-width: 760px){
+    .content{
+        width: 100%;
+    }
+    .header, .headerBg{
+        height: 46px;
+        width: 100%;
+    }
+    .header .nav{
+        display: none;
+    }
+    .header .logo {
+        width: 148px;
+        height: 28px;
+        z-index: 2;
+    }
+    .slide {
+        height: 252px;
+    }
+}
+
